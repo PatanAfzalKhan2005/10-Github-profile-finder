@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Profile Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔍 GitHub Profile Finder</h1>
+            <p>Search for any GitHub user profile</p>
+        </header>
+
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Enter GitHub username..." autocomplete="off">
+            <button id="searchBtn">Search</button>
+        </div>
+
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p>Loading...</p>
+        </div>
+
+        <div id="error" class="error"></div>
+
+        <div id="profileContainer" class="profile-container">
+            <div class="profile-card">
+                <img id="avatar" class="avatar" src="" alt="Profile Picture">
+                <div class="profile-info">
+                    <h2 id="name"></h2>
+                    <p id="username" class="username"></p>
+                    <p id="bio" class="bio"></p>
+                    <div class="profile-stats">
+                        <div class="stat">
+                            <span class="stat-value" id="followers">0</span>
+                            <span class="stat-label">Followers</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value" id="following">0</span>
+                            <span class="stat-label">Following</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value" id="repos">0</span>
+                            <span class="stat-label">Repositories</span>
+                        </div>
+                    </div>
+                    <div class="profile-details">
+                        <p id="location"></p>
+                        <p id="created"></p>
+                    </div>
+                    <a id="profileLink" href="" target="_blank" class="btn-profile">View GitHub Profile</a>
+                </div>
+            </div>
+
+            <div class="repos-container">
+                <h3>Latest Repositories</h3>
+                <div id="reposList" class="repos-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
